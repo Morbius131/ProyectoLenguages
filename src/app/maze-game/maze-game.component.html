@@ -1,0 +1,62 @@
+﻿<div id="wrap">
+<div id="bezel">
+
+  <!-- HUD bar retro -->
+  <div id="hudbar">
+    <div class="hb"><span class="lbl">NVL</span><span class="val" id="hl">1</span></div>
+    <div class="hb"><span class="lbl">♥</span><span class="val lives" id="hv">3</span></div>
+    <div class="hb"><span class="lbl">PTS</span><span class="val score" id="hs">0</span></div>
+    <div class="hb"><span class="lbl">RE</span><span class="val hi" id="hh">0</span></div>
+    <div class="hb"><span class="lbl">ENM</span><span class="val enm" id="he">1</span></div>
+    <div class="hb-sep"></div>
+    <span class="hb-portal" id="hbp">⬡ PORTAL</span>
+  </div>
+
+  <!-- Canvas Phaser -->
+  <div id="gc"></div>
+
+</div><!-- #bezel -->
+
+<!-- Overlays -->
+<div class="ov" id="ov-menu">
+  <div class="ov-content">
+    <div class="menu-logo">MAZE λ</div>
+    <div class="menu-insert">— SELECCIONA DIFICULTAD —</div>
+    <div class="diff-row">
+      <button class="diff-btn e" onclick="startGame(1)">FÁCIL<br><span style="color:#446;font-size:5px">1 enemigo</span></button>
+      <button class="diff-btn m" onclick="startGame(2)">MEDIO<br><span style="color:#446;font-size:5px">2 enemigos</span></button>
+      <button class="diff-btn h" onclick="startGame(3)">DIFÍCIL<br><span style="color:#446;font-size:5px">3 enemigos</span></button>
+      <button class="diff-btn i" onclick="startGame(4)">MÁXIMO<br><span style="color:#446;font-size:5px">4 enemigos</span></button>
+    </div>
+    <div class="menu-hi" id="menu-hi">RÉCORD: <b id="menu-hi-val">0</b></div>
+    <div class="menu-tags">
+      <span class="tag a">AFD</span>
+      <span class="tag l">AFND-λ</span>
+      <span class="tag g">GLC</span>
+      <span class="tag a">MEALY</span>
+    </div>
+  </div>
+</div>
+
+<div class="ov off" id="ov-go">
+  <div class="ov-content">
+    <div class="ov-title" style="color:#ff3355">GAME OVER</div>
+    <div class="ov-pts" id="go-s">0</div>
+    <div class="ov-sub">PUNTOS · NIVEL <span id="go-l">1</span></div>
+    <button class="ov-btn" onclick="showMenu()">↩ MENÚ</button>
+  </div>
+</div>
+
+<div class="ov off" id="ov-win">
+  <div class="ov-content">
+    <div class="ov-title" style="color:#00ffcc">NIVEL OK!</div>
+    <div class="ov-pts" id="win-s">0</div>
+    <div class="ov-sub" id="win-sub">PUNTOS · SIGUIENTE NIVEL</div>
+    <button class="ov-btn" id="win-btn">► NIVEL <span id="win-nl">2</span></button>
+    <button class="ov-btn sec" onclick="showMenu()">↩ MENÚ</button>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+</div><!-- #wrap -->
